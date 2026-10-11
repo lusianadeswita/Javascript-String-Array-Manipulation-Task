@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript CASE 2</title>
+</head>
+<body>
+    <script>
+        
+
+const products = [
+  { name: 'Laptop', price: 1000, active: true },
+  { name: 'Mouse', price: 20, active: false },
+  { name: 'Keyboard', price: 50, active: true }
+];
+
+// 1. Filter produk yang aktif
+const activeProducts = products.filter(
+  product => product.active === true
+);
+
+// 2. Ambil nama produk dan ubah menjadi uppercase
+const productNames = activeProducts.map(
+  product => product.name.toUpperCase()
+);
+
+// 3. Hitung total harga produk aktif
+const totalPrice = activeProducts.reduce(
+  (total, product) => total + product.price,
+  0
+);
+
+console.log("Produk Aktif:", activeProducts);
+console.log("Nama Produk:", productNames);
+console.log("Total Harga:", totalPrice);
+
+
+    </script>
+</body>
+</html>
